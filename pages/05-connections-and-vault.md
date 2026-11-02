@@ -1,6 +1,6 @@
 # 05. 연결 계정과 Vault
 
-Pickle은 Google, Microsoft, Slack, Notion 같은 계정과 휴대전화의 연락처·캘린더 등을 연결할 수 있다고 안내합니다. 연결하면 Pickle이 관련 정보를 읽고 작업에 사용할 수 있습니다. 필요한 계정 하나부터 연결하고, 어떤 자료를 읽을 수 있게 되는지 확인하세요. [공식 소개](https://www.pickle.com/help/start/what-is-pickle), [서비스 약관](https://www.pickle.com/terms-of-service)
+Pickle은 Google, Microsoft, Slack, Notion 같은 계정과 휴대전화의 연락처·캘린더 등을 연결할 수 있다고 안내합니다. 연결하면 Pickle이 관련 정보를 읽고 작업에 사용할 수 있습니다. 필요한 계정 하나부터 연결하고, 어떤 자료를 읽을 수 있게 되는지 확인하세요. [공식 소개](https://www.pickle.com/help/start/what-is-pickle), [서비스 약관](https://www.pickle.com/ko/terms-of-service)
 
 ## 연결 전에 정할 것
 
@@ -11,7 +11,7 @@ Pickle은 Google, Microsoft, Slack, Notion 같은 계정과 휴대전화의 연�
 | 누구의 정보가 포함되나요? | 내 정보 외에 동료·고객 정보가 있는지 |
 | 언제 연결을 끊을까요? | 시험 후 또는 작업 종료 후 |
 
-업무 계정이나 다른 사람의 정보가 들어 있는 계정은 자신에게 연결 권한이 있는지 먼저 확인하세요. Pickle의 약관도 연결할 권리가 있는 계정만 연결하도록 요구합니다. [서비스 약관](https://www.pickle.com/terms-of-service)
+업무 계정이나 다른 사람의 정보가 들어 있는 계정은 자신에게 연결 권한이 있는지 먼저 확인하세요. Pickle의 약관도 연결할 권리가 있는 계정만 연결하도록 요구합니다. [서비스 약관](https://www.pickle.com/ko/terms-of-service)
 
 ## 사이트 로그인 저장
 
@@ -21,6 +21,12 @@ Pickle은 Google, Microsoft, Slack, Notion 같은 계정과 휴대전화의 연�
 
 ## 접근 기간과 연결 해제
 
-약관은 사용자가 앱을 마지막으로 연 뒤 연결 계정·카드에 접근할 수 있는 기간을 기본 최대 30일 또는 사용자가 고른 더 짧은 기간으로 설명합니다. 기간이 끝나면 해당 정보가 필요한 작업은 앱을 다시 열 때까지 기다린다고 합니다. [서비스 약관](https://www.pickle.com/terms-of-service)
+![피클 앱의 계정·카드 접근 기록 화면](https://www.pickle.com/help-center/screens/privacy-access-log.webp)
+
+*이미지 출처: [Pickle 공식 도움말 ― 접근 기록 보기](https://www.pickle.com/help/privacy/activity), 2026년 11월 2일 확인. 기록에는 접근 시도가 표시되며, 외부 작업의 성공 여부는 별도로 확인해야 합니다.*
+
+약관은 사용자가 앱을 마지막으로 연 뒤 연결 계정·카드에 접근할 수 있는 기간을 기본 최대 30일 또는 사용자가 고른 더 짧은 기간으로 설명합니다. 기간이 끝나면 해당 정보가 필요한 작업은 앱을 다시 열 때까지 기다린다고 합니다. [서비스 약관](https://www.pickle.com/ko/terms-of-service)
+
+공식 도움말은 **나의 피클 → 연결된 앱 및 서비스 또는 연결된 결제 수단 → 암호화 배너 → 접근 기록**의 경로를 안내합니다. 기록을 열면 최근 접근 항목과 원본 내역을 볼 수 있습니다. 이 기록은 계정·카드 접근을 확인하는 자료이며 예약이나 결제가 성공했다는 증거와는 다릅니다. [접근 기록 보기](https://www.pickle.com/help/privacy/activity)
 
 이 매뉴얼의 권장 방법은 시험에 필요한 계정만 연결하고, 사용하지 않는 연결은 끊으며, 정기적으로 접근 기간을 확인하는 것입니다. **비밀번호를 AI가 보지 못하는 것**과 **연결된 계정으로 어떤 행동을 할 수 있는지**는 서로 다른 질문입니다.

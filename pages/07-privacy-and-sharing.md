@@ -15,7 +15,11 @@
 
 ## 공유 범위 확인
 
-Pickle의 약관은 친구나 다른 사람의 Pickle과 대화할 수 있으며, 사용자가 고른 공유 설정에 따라 Pickle이 대신 말할 수 있다고 설명합니다. 따라서 친구 기능을 사용할 때는 공유 수준과 사람별 설정, 공유하지 않을 항목을 점검하고 실제 대화를 확인해야 합니다. [서비스 약관](https://www.pickle.com/terms-of-service)
+![피클 앱의 정보 공개 범위 설정 화면](https://www.pickle.com/help-center/screens/privacy-sharing-settings.webp)
+
+*이미지 출처: [Pickle 공식 도움말 ― 정보 공개 범위 설정하기](https://www.pickle.com/help/privacy/sharing-settings), 2026년 11월 2일 확인.*
+
+Pickle의 약관은 친구나 다른 사람의 Pickle과 대화할 수 있으며, 사용자가 고른 공유 설정에 따라 Pickle이 대신 말할 수 있다고 설명합니다. 따라서 친구 기능을 사용할 때는 공유 수준과 사람별 설정, 공유하지 않을 항목을 점검하고 실제 대화를 확인해야 합니다. [서비스 약관](https://www.pickle.com/ko/terms-of-service)
 
 | 공유 전 질문 | 예 |
 | --- | --- |
@@ -26,4 +30,4 @@ Pickle의 약관은 친구나 다른 사람의 Pickle과 대화할 수 있으며
 
 ## 데이터 관리 습관
 
-기억은 정기적으로 수정·삭제하고, 쓰지 않는 계정 연결을 끊으세요. 채팅에 비밀번호나 카드 번호를 적지 마세요. 계정을 삭제할 때는 앱의 계정 삭제 경로와 [개인정보처리방침](https://www.pickle.com/privacy)의 보관 예외를 먼저 확인하세요. 약관은 계정 삭제 경로를 **Profile → Settings → Account → Delete account**로 설명합니다. [서비스 약관](https://www.pickle.com/terms-of-service)
+기억은 정기적으로 수정·삭제하고, 쓰지 않는 계정 연결을 끊으세요. 채팅에 비밀번호나 카드 번호를 적지 마세요. 계정을 삭제할 때는 앱의 계정 삭제 경로와 [개인정보처리방침](https://www.pickle.com/ko/privacy-policy)의 보관 예외를 먼저 확인하세요. 한국어 약관은 **설정 → 계정 → 계정 삭제하기**를 안내합니다. [한국어 서비스 약관](https://www.pickle.com/ko/terms-of-service)

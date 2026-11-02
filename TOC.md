@@ -9,4 +9,4 @@
 * [07. 개인정보와 공유](pages/07-privacy-and-sharing.md)
 * [08. 오류·중단·복구](pages/08-troubleshooting.md)
 * [09. 실전 요청 예시](pages/09-recipes.md)
-* [10. 요금과 점검표](pages/10-plans-and-checklists.md)
+* [10. 사용량과 점검표](pages/10-plans-and-checklists.md)

@@ -10,12 +10,25 @@
 | [Manage scheduled tasks](https://www.pickle.com/help/tasks/scheduled) | 일회성·반복 작업, 일시중지·수정·삭제 |
 | [Save a site login](https://www.pickle.com/help/connect/save-login) | 로그인 정보의 Vault 저장과 관리 |
 | [Privacy](https://www.pickle.com/privacy) | 비밀정보 분리, 정보 이용과 접근 기록에 관한 회사 설명 |
-| [Terms of Service](https://www.pickle.com/terms-of-service) | 이용 대상, 사용자의 책임, 작업 중단과 연결 계정 |
-| [Check your plan](https://www.pickle.com/help/credits/plans) | 요금제, 주간 사용 한도와 구독 관리 |
+| [한국어 서비스 약관](https://www.pickle.com/ko/terms-of-service) | 2026-10-24 시행; 만 16세 이상, 미성년자 동의, 작업 중단과 연결 계정 |
+| [요금제 확인하기](https://www.pickle.com/help/credits/plans) | 한국 계정 무료 이용과 일일 사용량 한도 |
+| [사용량 한도는 어떻게 되나요?](https://www.pickle.com/help/credits/usage-credits) | 한국 시간 새벽 4시 초기화, 한도 사용 항목 |
+
+## 본문 이미지
+
+아래 이미지는 Pickle 공식 도움말의 예시 화면을 **원본 URL로 표시**합니다. 이 저장소에 이미지 파일을 복제해 배포하지 않습니다. 실제 앱 화면은 바뀔 수 있습니다.
+
+| 이미지 | 원문 출처 | 사용 장 |
+| --- | --- | --- |
+| [기본 채팅 화면](https://www.pickle.com/help-center/screens/chat-basic.webp) | [화면 구성 알아보기](https://www.pickle.com/help/start/app-layout) | 01 |
+| [음성 통화 화면](https://www.pickle.com/help-center/screens/chat-voice-call.webp) | [피클과 통화하기](https://www.pickle.com/help/chat/voice-call) | 02 |
+| [접근 기록 화면](https://www.pickle.com/help-center/screens/privacy-access-log.webp) | [접근 기록 보기](https://www.pickle.com/help/privacy/activity) | 05 |
+| [정보 공개 범위 화면](https://www.pickle.com/help-center/screens/privacy-sharing-settings.webp) | [정보 공개 범위 설정하기](https://www.pickle.com/help/privacy/sharing-settings) | 07 |
+| [일일 사용량 화면](https://www.pickle.com/help-center/screens/credits-plans.webp) | [요금제 확인하기](https://www.pickle.com/help/credits/plans) | 10 |
 
 ## 주의할 점
 
 - 회사 문서 사이에도 시점에 따라 표현이 달라질 수 있습니다. 예를 들어 기능의 기본 켜짐 여부는 앱 화면을 우선합니다.
 - 보안·개인정보 설명은 회사의 공개 주장입니다. 이 매뉴얼이 이를 독립 검증하지 않았습니다.
-- 가격과 제공 지역은 변경될 수 있습니다. 결제 직전 앱의 요금제 화면과 최신 약관을 확인하세요.
+- 이용 조건과 사용량 한도는 변경될 수 있습니다. 앱 화면과 최신 한국어 약관을 확인하세요.
 - 실제 예약·주문·통화의 결과는 외부 서비스 상태로 확인해야 합니다.
