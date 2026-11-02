@@ -16,16 +16,16 @@ Pickle.com의 개인 AI 에이전트 **Pickle**을 처음 접하는 사람을 �
 
 ## 읽는 순서
 
-1. [시작 전 확인](pages/01-before-you-start.md): 대상 지역, 계정, 요금, 처음 맡길 일
-2. [대화와 음성 통화](pages/02-chat-and-calls.md): 요청을 분명하게 말하고 결과를 읽기
-3. [작업 위임](pages/03-delegating-tasks.md): 웹 작업·전화·승인 카드·완료 확인
-4. [예약과 결제](pages/04-bookings-and-payments.md): 돈과 약속이 걸린 작업의 경계
-5. [연결 계정과 Vault](pages/05-connections-and-vault.md): 로그인, 카드, 접근 권한
-6. [기억과 예약 작업](pages/06-memory-and-schedules.md): 기억 수정, 반복 실행 관리
-7. [개인정보와 공유](pages/07-privacy-and-sharing.md): 누가 무엇을 볼 수 있는지
-8. [오류·중단·복구](pages/08-troubleshooting.md): 실패 후 재시도와 외부 상태 확인
-9. [실전 요청 예시](pages/09-recipes.md): 부담이 작은 일부터 시작하는 문장
-10. [요금과 점검표](pages/10-plans-and-checklists.md): 사용량과 월간 점검
+1. [시작 전 확인](https://wikidocs.net/471753): 대상 지역, 계정, 요금, 처음 맡길 일
+2. [대화와 음성 통화](https://wikidocs.net/471754): 요청을 분명하게 말하고 결과를 읽기
+3. [작업 위임](https://wikidocs.net/471755): 웹 작업·전화·승인 카드·완료 확인
+4. [예약과 결제](https://wikidocs.net/471756): 돈과 약속이 걸린 작업의 경계
+5. [연결 계정과 Vault](https://wikidocs.net/471757): 로그인, 카드, 접근 권한
+6. [기억과 예약 작업](https://wikidocs.net/471758): 기억 수정, 반복 실행 관리
+7. [개인정보와 공유](https://wikidocs.net/471759): 누가 무엇을 볼 수 있는지
+8. [오류·중단·복구](https://wikidocs.net/471760): 실패 후 재시도와 외부 상태 확인
+9. [실전 요청 예시](https://wikidocs.net/471761): 부담이 작은 일부터 시작하는 문장
+10. [요금과 점검표](https://wikidocs.net/471762): 사용량과 월간 점검
 
 ## 이 매뉴얼의 사용법
 
@@ -35,7 +35,7 @@ Pickle.com의 개인 AI 에이전트 **Pickle**을 처음 접하는 사람을 �
 
 ## 출처와 갱신 기록
 
-- [공식 출처 목록](docs/SOURCES.md)
-- [갱신 기록](docs/CHANGELOG.md)
+- [공식 출처 목록](https://github.com/hae02y/pickle-ai-manual/blob/main/docs/SOURCES.md)
+- [갱신 기록](https://github.com/hae02y/pickle-ai-manual/blob/main/docs/CHANGELOG.md)
 
 이 저장소는 기존 하네스 입문서의 15장과 별개입니다. 하네스 입문서의 15장은 개념 사례로 남겨 두고, 이곳은 Pickle.com 사용 흐름만 다룹니다.

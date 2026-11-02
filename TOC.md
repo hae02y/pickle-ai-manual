@@ -1,6 +1,5 @@
 # 목차
 
-* [처음 쓰는 피클 AI](README.md)
 * [01. 시작 전 확인](pages/01-before-you-start.md)
 * [02. 대화와 음성 통화](pages/02-chat-and-calls.md)
 * [03. 작업 위임](pages/03-delegating-tasks.md)
