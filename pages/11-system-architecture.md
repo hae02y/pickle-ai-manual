@@ -18,7 +18,7 @@
 
 ![피클의 확인된 기능과 분석상 구성 요소를 구분한 시스템 흐름](https://raw.githubusercontent.com/hae02y/pickle-ai-manual/main/assets/pickle-system-flow.svg)
 
-*그림: 실선은 공식 문서가 설명하는 기능 경로, 점선 성격의 ‘추론’ 표시는 기능을 설명하기 위한 논리적 분해다. [작업 도움말](https://pickle.com/help/tasks/delegate), [공개 저장소](https://github.com/pickle-com/credential-enclave/blob/cff16a343bf5bb7953e5b65df6ab3600107e127d/README.md)를 바탕으로 이 책에서 작성.*
+*그림: 요청·실행·승인·외부 결과는 공식 문서가 설명하는 기능이며, ‘AI 이해·계획’ 상자는 기능을 설명하기 위한 논리적 분해다. [작업 도움말](https://pickle.com/help/tasks/delegate), [공개 저장소](https://github.com/pickle-com/credential-enclave/blob/cff16a343bf5bb7953e5b65df6ab3600107e127d/README.md)를 바탕으로 이 책에서 작성.*
 
 | 단계 | 기술적으로 필요한 일 | 공개 증거와 경계 |
 | --- | --- | --- |
