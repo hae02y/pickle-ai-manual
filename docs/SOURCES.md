@@ -1,6 +1,21 @@
 # 공식 출처와 확인 범위
 
-확인일: 2026년 11월 2일. 아래는 Pickle.com의 공식 자료입니다. 제품이 설명한 기능을 기록한 것이며, 독립적인 사용성·보안 감사 결과가 아닙니다.
+최초 확인일: 2026년 11월 2일. 기술 개정 확인일: **2026년 11월 17일**. 아래는 Pickle.com 및 기반 기술의 공식 자료입니다. 제품 설명과 공개 소스에 대한 정적 분석이며, 독립적인 사용성·보안 감사 결과가 아닙니다.
+
+## 기술 분석의 버전과 1차 자료
+
+| 자료 | 이 책에서 확인한 범위 |
+| --- | --- |
+| [`pickle-com/credential-enclave` commit `cff16a3`](https://github.com/pickle-com/credential-enclave/tree/cff16a343bf5bb7953e5b65df6ab3600107e127d) | 2026-11-09 소스. 분석 당시 최신 태그 `v2.3.0`과 구분해 고정. README·protocol·egress policy·secure program 문서 중심 정적 분석. |
+| [공개 README의 보장과 제한](https://github.com/pickle-com/credential-enclave/blob/cff16a343bf5bb7953e5b65df6ab3600107e127d/README.md) | 키 위임, attestation, 접근 로그, Vault `release`, PKCE 예외, operator·앱·AWS 신뢰 가정. |
+| [프로토콜](https://github.com/pickle-com/credential-enclave/blob/cff16a343bf5bb7953e5b65df6ab3600107e127d/docs/protocol.md) | HKDF·Ed25519·HPKE·AEAD, 단계별 구현 범위, 로그 체인, release. |
+| [Egress policy](https://github.com/pickle-com/credential-enclave/blob/cff16a343bf5bb7953e5b65df6ab3600107e127d/docs/egress-policy.md) | node 밖으로 나가는 값의 분류와 provider별 한계. |
+| [Secure program 문서](https://github.com/pickle-com/credential-enclave/blob/cff16a343bf5bb7953e5b65df6ab3600107e127d/secure-program/README.md) | 기기 측 프로그램의 범위와 검증 절차. |
+| [AWS Nitro attestation](https://docs.aws.amazon.com/enclaves/latest/user/set-up-attestation.html) | 코드 측정값과 공개 키 attestation의 기반 기술. |
+| [AWS S3 Object Lock](https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-lock.html) | compliance mode의 보존·삭제 방지 성질. |
+| [Sigstore Rekor](https://docs.sigstore.dev/logging/overview/) | 투명성 로그의 기본 보장과 포함성 증명의 의미. |
+
+**분석 범위의 한계:** 실행 노드의 attestation과 실제 앱 바이너리를 독립 검증하지 않았습니다. 대화·음성·브라우저·기억 모델의 내부 소스도 공개되지 않았습니다. 11~16장의 모델 설명은 이 한계를 본문마다 표시합니다.
 
 | 자료 | 매뉴얼에서 확인한 내용 |
 | --- | --- |
@@ -11,8 +26,8 @@
 | [Save a site login](https://www.pickle.com/help/connect/save-login) | 로그인 정보의 Vault 저장과 관리 |
 | [Privacy](https://www.pickle.com/privacy) | 비밀정보 분리, 정보 이용과 접근 기록에 관한 회사 설명 |
 | [한국어 서비스 약관](https://www.pickle.com/ko/terms-of-service) | 2026-10-24 시행; 만 16세 이상, 미성년자 동의, 작업 중단과 연결 계정 |
-| [요금제 확인하기](https://www.pickle.com/help/credits/plans) | 한국 계정 무료 이용과 일일 사용량 한도 |
-| [사용량 한도는 어떻게 되나요?](https://www.pickle.com/help/credits/usage-credits) | 한국 시간 새벽 4시 초기화, 한도 사용 항목 |
+| [요금제 확인하기](https://www.pickle.com/help/credits/plans) | 11월 2일 한국어 자료의 무료·일일 한도와 11월 17일 영어 자료의 유료·주간 크레딧이 다름 |
+| [사용량 한도는 어떻게 되나요?](https://www.pickle.com/help/credits/usage-credits) | 한도 초기화·브리핑 소모 등 시점·언어별 차이 |
 | [앱과 서비스 연결하기](https://www.pickle.com/help/connect/add-connection) | 연결 경로, 권한 요청, 연결 후 폭넓은 읽기 |
 | [연결을 끊으면 어떻게 되나요?](https://www.pickle.com/help/connect/disconnect) | 연결 해제 후 지워지는 것과 남는 것 |
 | [화면 구성 알아보기](https://www.pickle.com/help/start/app-layout) | 피클 프로필의 한 일·예약한 작업·함께한 추억 |
@@ -26,6 +41,8 @@
 
 아래 이미지는 Pickle 공식 도움말의 예시 화면을 **원본 URL로 표시**합니다. 이 저장소에 이미지 파일을 복제해 배포하지 않습니다. 실제 앱 화면은 바뀔 수 있습니다.
 
+기술 심화 장의 시스템·Vault·로그 SVG 3개는 공개 자료를 바탕으로 이 저장소에서 직접 작성한 설명 도식입니다. 실제 Pickle 내부 설계도를 복제한 것이 아닙니다.
+
 | 이미지 | 원문 출처 | 사용 장 |
 | --- | --- | --- |
 | [기본 채팅 화면](https://www.pickle.com/help-center/screens/chat-basic.webp) | [화면 구성 알아보기](https://www.pickle.com/help/start/app-layout) | 01 |
@@ -36,7 +53,7 @@
 | [정보 공개 범위 화면](https://www.pickle.com/help-center/screens/privacy-sharing-settings.webp) | [정보 공개 범위 설정하기](https://www.pickle.com/help/privacy/sharing-settings) | 07 |
 | [브라우저 열기 카드](https://www.pickle.com/help-center/screens/tasks-take-over-browser.webp) | [피클 대신 화면을 직접 조작하기](https://www.pickle.com/help/tasks/take-over-browser) | 08 |
 | [둘러보기 제안 카드](https://www.pickle.com/help-center/screens/tasks-explore-suggestions.webp) | [둘러보기의 제안 카드 쓰기](https://www.pickle.com/help/tasks/explore-suggestions) | 09 |
-| [일일 사용량 화면](https://www.pickle.com/help-center/screens/credits-plans.webp) | [요금제 확인하기](https://www.pickle.com/help/credits/plans) | 10 |
+| [이전 사용량 화면](https://www.pickle.com/help-center/screens/credits-plans.webp) | [요금제 확인하기](https://www.pickle.com/help/credits/plans); 실제 플랜 화면은 바뀔 수 있음 | 10 |
 
 ## 주의할 점
 

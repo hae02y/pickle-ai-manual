@@ -1,5 +1,9 @@
 # 03. 작업 위임
 
+![요청에서 외부 결과 확인까지의 에이전트 작업 흐름](https://raw.githubusercontent.com/hae02y/pickle-ai-manual/main/assets/pickle-system-flow.svg)
+
+*그림: [Pickle 공식 작업 안내](https://pickle.com/help/tasks/delegate)와 [공개 자격 증명 처리 소스](https://github.com/pickle-com/credential-enclave/blob/cff16a343bf5bb7953e5b65df6ab3600107e127d/README.md)를 바탕으로 이 책에서 작성한 분석 도식. AI 내부 계획 방식은 미공개입니다.*
+
 Pickle에게 일을 맡기면 말이 실제 행동으로 이어질 수 있습니다. 회사는 자체 브라우저로 웹사이트를 이용하고, 온라인으로 처리하기 어려운 일에는 전화를 건다고 안내합니다. 따라서 “찾아줘”, “문의해 줘”, “확정해 줘”는 서로 다른 수준의 요청입니다. [작업 위임 안내](https://www.pickle.com/help/tasks/delegate)
 
 ## 공식 안내에 나온 기본 흐름
@@ -36,3 +40,5 @@ Pickle의 보고는 출발점입니다. 회사도 실수가 있을 수 있으므
 ## 권장 연습
 
 첫 주에는 **결과가 외부에 영향을 주지 않는 요청** 두세 개로 시작하세요. 후보 비교가 잘 되는지, 제시한 근거를 읽을 수 있는지, 요청을 정정했을 때 반영되는지를 살펴보세요. 그다음 예약 문의와 같은 단계로 넓히는 것이 좋습니다.
+
+> **기술 분석:** 웹 작업은 보통 `관찰 → 판단 → 행동 → 재관찰`의 반복으로 설명할 수 있습니다. 이 반복은 공개된 Pickle 내부 알고리즘이 아니라 기능에서 도출한 분석 모델입니다. 클릭이나 제출 화면만으로 완료를 판단하면 중복 실행이 생길 수 있습니다. [11장](11-system-architecture.md)의 성공 조건과 [12장](12-ai-techniques.md)의 웹 에이전트 평가 지표를 함께 보세요.

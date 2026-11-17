@@ -1,5 +1,9 @@
 # 04. 예약과 결제
 
+![Vault 값이 결제 작업에 쓰일 때의 신뢰 경계](https://raw.githubusercontent.com/hae02y/pickle-ai-manual/main/assets/pickle-vault-boundaries.svg)
+
+*그림: 공개 [`credential-enclave`의 `release` 설명](https://github.com/pickle-com/credential-enclave/blob/cff16a343bf5bb7953e5b65df6ab3600107e127d/README.md#what-it-does-not-guarantee)을 바탕으로 이 책에서 작성. 저장 시 암호화와 결제 양식 입력 시의 평문 경계를 구분합니다.*
+
 예약과 결제는 다른 사람과의 약속이나 돈의 이동을 만듭니다. Pickle은 이런 행동 전에 사용자에게 조건과 비용을 보여 주고, 승인한 범위에서 진행한다고 설명합니다. 금액이 결제 직전에 오르면 다시 묻는다고도 안내합니다. [개인정보·보안 안내](https://www.pickle.com/privacy), [서비스 약관](https://www.pickle.com/ko/terms-of-service)
 
 ## 예약을 맡기는 순서
@@ -25,3 +29,5 @@
 ## 예시 요청
 
 > “토요일 오후 7시, 2명 식당을 찾아줘. 1인당 예산은 5만 원 이내야. 예약금과 취소 수수료가 있는지 표시해 줘. 내 승인을 받기 전에는 예약 확정이나 결제를 하지 마.”
+
+> **기술 분석:** 카드가 Vault에 암호화되어 있어도 실제 결제 양식에 입력할 때는 해당 값이 enclave의 `release` 경계를 넘어 작업 실행 환경으로 전달될 수 있습니다. 이는 [공개 소스가 명시한 제한](https://github.com/pickle-com/credential-enclave/blob/cff16a343bf5bb7953e5b65df6ab3600107e127d/README.md#what-it-does-not-guarantee)입니다. 승인 카드는 금액·상점·취소 조건을 검토하는 수단이며, 승인 UI와 enclave의 정책 강제 범위를 동일시해서는 안 됩니다. [13장](13-vault-enclave.md), [15장](15-access-log.md)을 참고하세요.
