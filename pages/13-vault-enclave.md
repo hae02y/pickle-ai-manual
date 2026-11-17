@@ -37,9 +37,9 @@ Nitro의 attestation은 [AWS 공식 문서](https://docs.aws.amazon.com/enclaves
 
 [`egress-policy.md`](https://github.com/pickle-com/credential-enclave/blob/cff16a343bf5bb7953e5b65df6ab3600107e127d/docs/egress-policy.md)의 분류에서 Vault 비밀번호·카드 번호·CVC는 `release`에 의해 한 필드씩 반환될 수 있다. TOTP는 seed 자체가 node에 남지만 **6자리 코드**가 반환될 수 있다. 반면 OAuth 토큰은 `release`가 거부한다. 이 차이는 실제 위험 평가에 직접 영향을 준다.
 
-예를 들어 비밀번호를 사이트에 입력하는 작업에서는 **사이트, 브라우저 실행 환경, 값을 전달받은 worker**를 신뢰해야 한다. 카드 입력 작업에서는 금액·상점·결제 대상 확인이 추가로 필요하다. 그래서 [04장](04-bookings-and-payments.md)의 결제 승인과 [07장](07-privacy-and-sharing.md)의 데이터 공유를 별도로 점검해야 한다.
+예를 들어 비밀번호를 사이트에 입력하는 작업에서는 **사이트, 브라우저 실행 환경, 값을 전달받은 worker**를 신뢰해야 한다. 카드 입력 작업에서는 금액·상점·결제 대상 확인이 추가로 필요하다. 그래서 [04장](https://wikidocs.net/471756)의 결제 승인과 [07장](https://wikidocs.net/471759)의 데이터 공유를 별도로 점검해야 한다.
 
 ## 철회와 업데이트의 한계
 
-공개 README에 따르면 위임 철회 요청은 operator 경유로 살아 있는 node에 전달된다. operator가 살아 있는 node를 목록에서 누락하면, 그 node는 위임 만료까지 사용자 키를 유지할 수 있다. 만료 상한은 30일이다. 또한 operator는 공개 투명성 로그에 기록된 **새 release**로 위임을 이전할 수 있으며, 이전 전 별도 통지 기간은 없다. 이는 “코드가 공개되었으니 미래 버전도 자동으로 같은 보호 수준”이라는 추론을 막는다. 구체적인 접근 기록 검증은 [15장](15-access-log.md)에서 다룬다.
+공개 README에 따르면 위임 철회 요청은 operator 경유로 살아 있는 node에 전달된다. operator가 살아 있는 node를 목록에서 누락하면, 그 node는 위임 만료까지 사용자 키를 유지할 수 있다. 만료 상한은 30일이다. 또한 operator는 공개 투명성 로그에 기록된 **새 release**로 위임을 이전할 수 있으며, 이전 전 별도 통지 기간은 없다. 이는 “코드가 공개되었으니 미래 버전도 자동으로 같은 보호 수준”이라는 추론을 막는다. 구체적인 접근 기록 검증은 [15장](https://wikidocs.net/491194)에서 다룬다.
 

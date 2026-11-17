@@ -52,4 +52,4 @@ Pickle은 Google, Microsoft, Slack, Notion 같은 계정과 휴대전화의 연�
 
 이 매뉴얼의 권장 방법은 시험에 필요한 계정만 연결하고, 사용하지 않는 연결은 끊으며, 정기적으로 접근 기간을 확인하는 것입니다. **비밀번호를 AI가 보지 못하는 것**과 **연결된 계정으로 어떤 행동을 할 수 있는지**는 서로 다른 질문입니다.
 
-> **기술 분석:** 연결 방식은 사이트 로그인 정보 저장과 OAuth 토큰 연결로 나뉩니다. 공개 [`credential-enclave`](https://github.com/pickle-com/credential-enclave/tree/cff16a343bf5bb7953e5b65df6ab3600107e127d)는 기기 키, attestation, 최대 30일 위임, token의 node 내부 사용, Vault 값의 `release`를 설명합니다. **토큰 보호와 연결 서비스의 이메일·문서 내용 보호는 별개**입니다. [13장](13-vault-enclave.md)과 [14장](14-oauth-data-boundaries.md)에서 경계를 자세히 분석합니다.
+> **기술 분석:** 연결 방식은 사이트 로그인 정보 저장과 OAuth 토큰 연결로 나뉩니다. 공개 [`credential-enclave`](https://github.com/pickle-com/credential-enclave/tree/cff16a343bf5bb7953e5b65df6ab3600107e127d)는 기기 키, attestation, 최대 30일 위임, token의 node 내부 사용, Vault 값의 `release`를 설명합니다. **토큰 보호와 연결 서비스의 이메일·문서 내용 보호는 별개**입니다. [13장](https://wikidocs.net/491192)과 [14장](https://wikidocs.net/491193)에서 경계를 자세히 분석합니다.

@@ -29,7 +29,7 @@ Pickle.com의 개인 AI 에이전트 **Pickle**을 처음 접하는 사람을 �
 9. [실전 요청 예시](https://wikidocs.net/471761): 부담이 작은 일부터 시작하는 문장
 10. [사용량과 점검표](https://wikidocs.net/471762): 지역·플랜별 한도와 정기 점검
 
-**기술 심화:** [11장 시스템 구조](pages/11-system-architecture.md) → [12장 AI 기술](pages/12-ai-techniques.md) → [13장 Vault와 enclave](pages/13-vault-enclave.md) → [14장 OAuth](pages/14-oauth-data-boundaries.md) → [15장 접근 로그](pages/15-access-log.md) → [16장 위협 모델·검증](pages/16-threat-model-and-verification.md). 위키독스의 새 장 URL은 게시 후 목차에서 확인할 수 있습니다.
+**기술 심화:** [11장 시스템 구조](https://wikidocs.net/491190) → [12장 AI 기술](https://wikidocs.net/491191) → [13장 Vault와 enclave](https://wikidocs.net/491192) → [14장 OAuth](https://wikidocs.net/491193) → [15장 접근 로그](https://wikidocs.net/491194) → [16장 위협 모델·검증](https://wikidocs.net/491195). 각 장의 위키독스 주소로 바로 이동할 수 있습니다.
 
 ## 이 매뉴얼의 사용법
 
@@ -42,7 +42,7 @@ Pickle.com의 개인 AI 에이전트 **Pickle**을 처음 접하는 사람을 �
 ## 출처와 갱신 기록
 
 - [공식 출처 목록](https://github.com/hae02y/pickle-ai-manual/blob/main/docs/SOURCES.md)
-- [기술 분석의 방법과 한계](pages/16-threat-model-and-verification.md)
+- [기술 분석의 방법과 한계](https://wikidocs.net/491195)
 - [갱신 기록](https://github.com/hae02y/pickle-ai-manual/blob/main/docs/CHANGELOG.md)
 
 이 저장소는 기존 하네스 입문서의 15장과 별개입니다. 하네스 입문서의 15장은 개념 사례로 남겨 두고, 이곳은 Pickle.com 사용 흐름만 다룹니다.
