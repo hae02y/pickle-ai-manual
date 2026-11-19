@@ -16,3 +16,4 @@
 * [14. OAuth·토큰·외부 데이터의 경계](pages/14-oauth-data-boundaries.md)
 * [15. 접근 로그와 검증의 한계](pages/15-access-log.md)
 * [16. 위협 모델과 재현 가능한 검증](pages/16-threat-model-and-verification.md)
+* [17. 피클 AI에 첫 작업 맡기기: 요청부터 완료 확인까지](pages/17-first-task-walkthrough.md)

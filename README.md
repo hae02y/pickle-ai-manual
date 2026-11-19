@@ -31,6 +31,8 @@ Pickle.com의 개인 AI 에이전트 **Pickle**을 처음 접하는 사람을 �
 
 **기술 심화:** [11장 시스템 구조](https://wikidocs.net/491190) → [12장 AI 기술](https://wikidocs.net/491191) → [13장 Vault와 enclave](https://wikidocs.net/491192) → [14장 OAuth](https://wikidocs.net/491193) → [15장 접근 로그](https://wikidocs.net/491194) → [16장 위협 모델·검증](https://wikidocs.net/491195). 각 장의 위키독스 주소로 바로 이동할 수 있습니다.
 
+**따라 하기:** 17장에서는 후보 검색에서 문의·예약으로 넘어가는 첫 작업을 요청문, 승인 조건, 완료 증거와 함께 연습합니다. 실제 예약 성공 사례가 아니라 공식 기능을 바탕으로 구성한 예시입니다.
+
 ## 이 매뉴얼의 사용법
 
 각 장의 **제품 설명**은 공식 자료에 링크를 붙였습니다. **권장 방법**은 독자가 실수와 불필요한 권한을 줄이도록 이 매뉴얼에서 제안하는 절차입니다. 기술 심화 장은 **공식 확인 사실·공개 소스의 정적 분석·구현 기반 추론·미확인 사항**을 구분합니다. 둘을 섞어 읽지 마세요.
@@ -44,5 +46,9 @@ Pickle.com의 개인 AI 에이전트 **Pickle**을 처음 접하는 사람을 �
 - [공식 출처 목록](https://github.com/hae02y/pickle-ai-manual/blob/main/docs/SOURCES.md)
 - [기술 분석의 방법과 한계](https://wikidocs.net/491195)
 - [갱신 기록](https://github.com/hae02y/pickle-ai-manual/blob/main/docs/CHANGELOG.md)
+
+## 독자 오픈채팅방
+
+책의 예시를 자기 상황에 맞게 바꾸거나 질문을 나누려면 [카카오톡 오픈채팅방](https://open.kakao.com/o/glN01iXi)을 이용하세요. 이 방은 **Pickle.com 공식 고객지원 채널이 아닙니다.** 비밀번호, 인증번호, 카드 정보, 타인의 개인정보를 올리지 마세요. 계정·서비스 문제는 [Pickle 공식 도움말](https://www.pickle.com/help)의 문의 경로를 이용하세요.
 
 이 저장소는 기존 하네스 입문서의 15장과 별개입니다. 하네스 입문서의 15장은 개념 사례로 남겨 두고, 이곳은 Pickle.com 사용 흐름만 다룹니다.

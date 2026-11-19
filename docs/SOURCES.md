@@ -17,6 +17,20 @@
 
 **분석 범위의 한계:** 실행 노드의 attestation과 실제 앱 바이너리를 독립 검증하지 않았습니다. 대화·음성·브라우저·기억 모델의 내부 소스도 공개되지 않았습니다. 11~16장의 모델 설명은 이 한계를 본문마다 표시합니다.
 
+## 2026년 11월 19일 첫 작업 실습 장 확인
+
+| 공식 자료 | 17장에서 사용한 내용 |
+| --- | --- |
+| [Give your Pickle a task](https://www.pickle.com/help/tasks/delegate) | Chat 요청, 조건 카드, 앱을 닫아도 계속되는 작업, 예약 확인 링크·화면, 실수 가능성 |
+| [How does Pickle check before paying?](https://www.pickle.com/help/tasks/confirm-before-payment) | 사전 동의 범위, 금액·상품·시간 변경 시 확인, 결제 후 주문 내역 대조 |
+| [Get to know the app layout](https://www.pickle.com/help/start/app-layout) | Chat·Explore 등 앱 진입 위치 |
+| [View other chats](https://www.pickle.com/help/chat/other-chats) | 피클이 건 전화의 대화·연결 결과 확인 |
+| [Save a site login](https://www.pickle.com/help/connect/save-login) | 로그인 값은 일반 채팅이 아닌 Vault 카드에 입력 |
+| [View your access log](https://www.pickle.com/help/privacy/activity) | 자격 증명 사용 시도 기록과 외부 작업 성공의 차이 |
+| [Terms of Service](https://www.pickle.com/terms-of-service) | 브라우저 인계와 이미 완료된 외부 단계의 중단 한계 |
+
+17장의 식당 사례와 새 SVG는 저자 구성 예시입니다. 카카오톡 링크는 사용자가 독자 안내용으로 제공했으며 Pickle의 공식 제품 자료가 아닙니다.
+
 | 자료 | 매뉴얼에서 확인한 내용 |
 | --- | --- |
 | [What is Pickle?](https://www.pickle.com/help/start/what-is-pickle) | 대화, 통화, 작업 위임, 연결 계정, 기억 |
@@ -42,6 +56,8 @@
 아래 이미지는 Pickle 공식 도움말의 예시 화면을 **원본 URL로 표시**합니다. 이 저장소에 이미지 파일을 복제해 배포하지 않습니다. 실제 앱 화면은 바뀔 수 있습니다.
 
 기술 심화 장의 시스템·Vault·로그 SVG 3개는 공개 자료를 바탕으로 이 저장소에서 직접 작성한 설명 도식입니다. 실제 Pickle 내부 설계도를 복제한 것이 아닙니다.
+
+17장의 첫 작업 단계 SVG도 이 저장소에서 작성한 설명 도식입니다. 해당 장의 작업 상태 화면은 Pickle 공식 도움말 URL로 표시하고 원문을 이미지 아래에 붙였습니다.
 
 | 이미지 | 원문 출처 | 사용 장 |
 | --- | --- | --- |
