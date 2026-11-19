@@ -70,6 +70,7 @@
 | [브라우저 열기 카드](https://www.pickle.com/help-center/screens/tasks-take-over-browser.webp) | [피클 대신 화면을 직접 조작하기](https://www.pickle.com/help/tasks/take-over-browser) | 08 |
 | [둘러보기 제안 카드](https://www.pickle.com/help-center/screens/tasks-explore-suggestions.webp) | [둘러보기의 제안 카드 쓰기](https://www.pickle.com/help/tasks/explore-suggestions) | 09 |
 | [이전 사용량 화면](https://www.pickle.com/help-center/screens/credits-plans.webp) | [요금제 확인하기](https://www.pickle.com/help/credits/plans); 실제 플랜 화면은 바뀔 수 있음 | 10 |
+| [작업 상태 화면](https://www.pickle.com/help-center/screens/tasks-check-and-cancel.webp) | [진행 중인 일 확인하고 취소하기](https://www.pickle.com/help/tasks/check-and-cancel) | 17 |
 
 ## 주의할 점
 
