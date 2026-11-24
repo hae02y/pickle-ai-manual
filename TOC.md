@@ -18,3 +18,4 @@
 * [16. 위협 모델과 재현 가능한 검증](pages/16-threat-model-and-verification.md)
 * [17. 피클 AI에 첫 작업 맡기기: 요청부터 완료 확인까지](pages/17-first-task-walkthrough.md)
 * [18. 업데이트 노트: 바뀌는 안내를 읽는 법](pages/18-updates-and-reading-guide.md)
+* [19. 피클과 다른 AI 에이전트 앱, 어떤 일을 맡길까](pages/19-agent-apps-comparison.md)

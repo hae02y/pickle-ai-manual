@@ -40,6 +40,18 @@
 
 17장의 식당 사례와 새 SVG는 저자 구성 예시입니다. 카카오톡 링크는 사용자가 독자 안내용으로 제공했으며 Pickle의 공식 제품 자료가 아닙니다.
 
+## 19장 에이전트 앱 비교 (2026-11-24 확인)
+
+| 제품 | 공식 기능·권한 문서 | 앱 아이콘 출처 |
+| --- | --- | --- |
+| Pickle | [작업 위임](https://www.pickle.com/help/tasks/delegate), [결제 확인](https://www.pickle.com/help/tasks/confirm-before-payment), [예약 작업](https://www.pickle.com/help/tasks/scheduled) | [공식 프레스킷](https://www.pickle.com/press-kit), 공식 사이트 앱 아이콘 |
+| ChatGPT Work | [Work와 Codex](https://help.openai.com/en/articles/20001275-chatgpt-work-and-codex), [클라우드 브라우저](https://help.openai.com/en/articles/20001280-using-cloud-browser-in-chatgpt) | [ChatGPT 공식 사이트](https://chatgpt.com/) 앱 아이콘 |
+| Claude Cowork | [시작 안내](https://support.claude.com/en/articles/13345190-get-started-with-claude-cowork), [컴퓨터 사용](https://support.claude.com/en/articles/14128542-let-claude-use-your-computer-in-cowork) | [Claude 공식 사이트](https://claude.ai/) 앱 아이콘 |
+| Manus | [Browser Operator](https://manus.im/en/blog/manus-browser-operator), [자동화](https://www.manus.im/features/automations) | [Manus 공식 사이트](https://manus.im/) 앱 아이콘 |
+| Gemini Apps | [Tasks](https://support.google.com/gemini/answer/17094507), [행동 권한](https://support.google.com/gemini/answer/18766567) | [Gemini 공식 사이트](https://gemini.google.com/app) 앱 아이콘 |
+
+아이콘은 공식 사이트 제공 파일을 원본 비율대로 48픽셀로 표시합니다. 비교 장은 직접 성능 시험이 아니라 공식 문서의 기능 범위와 사용자의 검증 방법을 구분한 원고입니다. 인쇄·광고·판촉용 재사용 조건은 별도 확인 대상입니다.
+
 | 자료 | 매뉴얼에서 확인한 내용 |
 | --- | --- |
 | [What is Pickle?](https://www.pickle.com/help/start/what-is-pickle) | 대화, 통화, 작업 위임, 연결 계정, 기억 |
