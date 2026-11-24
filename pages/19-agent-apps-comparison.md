@@ -10,11 +10,11 @@
 
 | 공식 앱 아이콘 | 이 장에서 비교하는 제품 | 공식 문서에서 확인한 작업 경로 |
 | --- | --- | --- |
-| ![Pickle 앱 아이콘](../assets/agent-logo-pickle.png) | [Pickle](https://www.pickle.com/help/tasks/delegate) | 대화에서 맡긴 일을 웹사이트에서 진행하고, 필요한 경우 전화 |
-| ![ChatGPT 앱 아이콘](../assets/agent-logo-chatgpt.png) | [ChatGPT Work](https://help.openai.com/en/articles/20001275-chatgpt-work-and-codex) | 연결 앱·파일과 별도 클라우드 브라우저로 여러 단계의 일 수행 |
-| ![Claude 앱 아이콘](../assets/agent-logo-claude.png) | [Claude Cowork](https://support.claude.com/en/articles/13345190-get-started-with-claude-cowork) | 연결 도구·파일·지원되는 브라우저 또는 컴퓨터 사용으로 작업 |
-| ![Manus 앱 아이콘](../assets/agent-logo-manus.png) | [Manus](https://manus.im/en/blog/manus-browser-operator) | 클라우드 브라우저 또는 사용자가 허용한 로컬 브라우저, 연결 도구 |
-| ![Gemini 앱 아이콘](../assets/agent-logo-gemini.png) | [Gemini Apps의 Tasks](https://support.google.com/gemini/answer/17094507) | 연결 앱과 로컬 Chrome 또는 별도 원격 브라우저를 이용한 작업 |
+| ![Pickle 앱 아이콘](https://raw.githubusercontent.com/hae02y/pickle-ai-manual/main/assets/agent-logo-pickle.png) | [Pickle](https://www.pickle.com/help/tasks/delegate) | 대화에서 맡긴 일을 웹사이트에서 진행하고, 필요한 경우 전화 |
+| ![ChatGPT 앱 아이콘](https://raw.githubusercontent.com/hae02y/pickle-ai-manual/main/assets/agent-logo-chatgpt.png) | [ChatGPT Work](https://help.openai.com/en/articles/20001275-chatgpt-work-and-codex) | 연결 앱·파일과 별도 클라우드 브라우저로 여러 단계의 일 수행 |
+| ![Claude 앱 아이콘](https://raw.githubusercontent.com/hae02y/pickle-ai-manual/main/assets/agent-logo-claude.png) | [Claude Cowork](https://support.claude.com/en/articles/13345190-get-started-with-claude-cowork) | 연결 도구·파일·지원되는 브라우저 또는 컴퓨터 사용으로 작업 |
+| ![Manus 앱 아이콘](https://raw.githubusercontent.com/hae02y/pickle-ai-manual/main/assets/agent-logo-manus.png) | [Manus](https://manus.im/en/blog/manus-browser-operator) | 클라우드 브라우저 또는 사용자가 허용한 로컬 브라우저, 연결 도구 |
+| ![Gemini 앱 아이콘](https://raw.githubusercontent.com/hae02y/pickle-ai-manual/main/assets/agent-logo-gemini.png) | [Gemini Apps의 Tasks](https://support.google.com/gemini/answer/17094507) | 연결 앱과 로컬 Chrome 또는 별도 원격 브라우저를 이용한 작업 |
 
 *아이콘 출처: [Pickle 공식 프레스킷](https://www.pickle.com/press-kit), [ChatGPT](https://chatgpt.com/), [Claude](https://claude.ai/), [Manus](https://manus.im/), [Gemini](https://gemini.google.com/app) 공식 사이트. 2026년 11월 24일 제공된 앱 아이콘을 원본 비율대로 48픽셀로 표시했습니다. 각 상표는 해당 회사의 것이며, 이 비교는 제휴나 추천을 뜻하지 않습니다.*
 
