@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="480" viewBox="0 0 1100 480" role="img" aria-labelledby="title desc">
+  <title id="title">피클 매뉴얼의 콘텐츠 활용 경로</title>
+  <desc id="desc">무료 매뉴얼, 독자 질문 확인, 유료 편집판, 교육과 기업 적용으로 이어지는 선택지와 각 단계의 검증 질문</desc>
+  <rect width="1100" height="480" rx="24" fill="#f7f8fc"/>
+  <g font-family="Apple SD Gothic Neo, Noto Sans KR, sans-serif" fill="#23354d">
+    <text x="45" y="62" font-size="29" font-weight="700">같은 글을 다시 파는 대신, 새로운 가치를 더합니다</text>
+    <text x="45" y="94" font-size="17" fill="#596d83">각 단계는 수익 보장이 아니라 독자의 필요를 확인하는 선택지입니다.</text>
+    <rect x="45" y="138" width="225" height="180" rx="18" fill="#dcecff" stroke="#82addd" stroke-width="2"/>
+    <text x="66" y="178" font-size="22" font-weight="700">무료 매뉴얼</text>
+    <text x="66" y="217" font-size="17">기본 사용법·안전 경계</text>
+    <text x="66" y="248" font-size="17">광고·자발적 후원</text>
+    <text x="66" y="289" font-size="15" fill="#536a83">독자가 어디서 막히나?</text>
+    <path d="M270 227H302" stroke="#778ba4" stroke-width="3"/>
+    <path d="m294 219 12 8-12 8" fill="#778ba4"/>
+    <rect x="308" y="138" width="225" height="180" rx="18" fill="#e9e4ff" stroke="#a39bdc" stroke-width="2"/>
+    <text x="329" y="178" font-size="22" font-weight="700">독자 질문</text>
+    <text x="329" y="217" font-size="17">반복 질문·오류·요청</text>
+    <text x="329" y="248" font-size="17">실제 필요 확인</text>
+    <text x="329" y="289" font-size="15" fill="#536a83">무엇을 더 원하나?</text>
+    <path d="M533 227H565" stroke="#778ba4" stroke-width="3"/>
+    <path d="m557 219 12 8-12 8" fill="#778ba4"/>
+    <rect x="571" y="138" width="225" height="180" rx="18" fill="#e4f3e9" stroke="#9bc5a8" stroke-width="2"/>
+    <text x="592" y="178" font-size="22" font-weight="700">편집된 판본</text>
+    <text x="592" y="217" font-size="17">전자책·워크북·POD</text>
+    <text x="592" y="248" font-size="17">교정·실습·권리 정리</text>
+    <text x="592" y="289" font-size="15" fill="#536a83">무료판과 무엇이 다른가?</text>
+    <path d="M796 227H828" stroke="#778ba4" stroke-width="3"/>
+    <path d="m820 219 12 8-12 8" fill="#778ba4"/>
+    <rect x="834" y="138" width="221" height="180" rx="18" fill="#fff0df" stroke="#dfb789" stroke-width="2"/>
+    <text x="855" y="178" font-size="22" font-weight="700">교육·적용</text>
+    <text x="855" y="217" font-size="17">워크숍·기업 교육</text>
+    <text x="855" y="248" font-size="17">실제 사례와 피드백</text>
+    <text x="855" y="289" font-size="15" fill="#536a83">어떤 결과를 검증했나?</text>
+    <rect x="45" y="365" width="1010" height="74" rx="14" fill="#edf1f6"/>
+    <text x="68" y="398" font-size="19" font-weight="700">모든 단계에 공통</text>
+    <text x="250" y="398" font-size="17">출처 확인 · 실제 경험과 예시 구분 · 이미지 사용 권리 · 정산 조건 확인</text>
+  </g>
+</svg>

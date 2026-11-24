@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="430" viewBox="0 0 1100 430" role="img" aria-labelledby="title desc">
+  <title id="title">오류 뒤 재시도 전 확인할 세 가지 상태</title>
+  <desc id="desc">작업 오류 뒤 외부 서비스 내역을 확인하고 접수됨, 미접수, 확인 불가에 따라 다른 행동을 선택하는 흐름</desc>
+  <rect width="1100" height="430" rx="24" fill="#f5f8fc"/>
+  <g font-family="Apple SD Gothic Neo, Noto Sans KR, sans-serif" fill="#183451">
+    <text x="44" y="60" font-size="29" font-weight="700">오류가 보이면, 먼저 외부 상태를 확인합니다</text>
+    <text x="44" y="91" font-size="17" fill="#55708c">피클의 보고와 업체·결제 서비스의 실제 기록을 나누어 읽기</text>
+    <rect x="44" y="125" width="244" height="107" rx="15" fill="#244e77"/>
+    <text x="67" y="166" font-size="21" font-weight="700" fill="white">작업 오류·중단</text>
+    <text x="67" y="199" font-size="16" fill="#e2eef8">바로 다시 실행하지 않기</text>
+    <path d="M288 179H357" stroke="#6d88a2" stroke-width="3" fill="none"/>
+    <path d="m347 171 12 8-12 8" fill="#6d88a2"/>
+    <rect x="360" y="125" width="274" height="107" rx="15" fill="#e2eff9" stroke="#85aed0" stroke-width="2"/>
+    <text x="384" y="166" font-size="21" font-weight="700">외부 내역 조회</text>
+    <text x="384" y="199" font-size="16">예약·주문·카드 기록</text>
+    <path d="M634 179H693" stroke="#6d88a2" stroke-width="3" fill="none"/>
+    <path d="m683 171 12 8-12 8" fill="#6d88a2"/>
+    <rect x="696" y="125" width="360" height="76" rx="14" fill="#dff4e9" stroke="#73bd95" stroke-width="2"/>
+    <text x="719" y="158" font-size="20" font-weight="700">접수됨</text>
+    <text x="825" y="158" font-size="17">재시도 금지 · 조건 대조</text>
+    <rect x="696" y="214" width="360" height="76" rx="14" fill="#fff0d9" stroke="#e2ba68" stroke-width="2"/>
+    <text x="719" y="247" font-size="20" font-weight="700">미접수</text>
+    <text x="825" y="247" font-size="17">새 조건 확인 후 재요청</text>
+    <rect x="696" y="303" width="360" height="76" rx="14" fill="#f8e8ea" stroke="#d7979f" stroke-width="2"/>
+    <text x="719" y="336" font-size="20" font-weight="700">확인 불가</text>
+    <text x="825" y="336" font-size="17">업체·결제처에 문의</text>
+    <text x="45" y="341" font-size="18" font-weight="700">핵심 원칙</text>
+    <text x="45" y="373" font-size="17">화면 오류는 성공도 실패도 증명하지 않습니다.</text>
+  </g>
+</svg>

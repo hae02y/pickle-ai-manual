@@ -6,6 +6,8 @@
 
 예약 사이트에 로그인하려면 언젠가는 비밀번호를 입력해야 한다. 결제하려면 카드 번호를 결제 양식에 전달해야 한다. 따라서 핵심 질문은 “암호화되어 있나?”보다 **누가, 어느 순간에, 어떤 값의 평문을 볼 수 있나?**다. Pickle의 [로그인 저장 도움말](https://www.pickle.com/help/connect/save-login)과 [카드 저장 도움말](https://pickle.com/help/connect/save-card)은 Vault를 설명한다. 공개 소스는 Vault와 계정 연결의 경계를 더 자세히 보여 준다.
 
+금고에 열쇠를 넣어 두어도 문을 열 때는 누군가 그 열쇠를 써야 한다. 자격 증명도 비슷하다. 저장 중에는 암호문이어도 로그인이나 결제 시점에는 필요한 값이 작업 경계를 넘어간다. 이 비유는 왜 **보관의 안전성**과 **사용 순간의 안전성**을 따로 읽어야 하는지 보여 준다.
+
 ![기기 키에서 enclave 위임과 Vault 값 사용까지의 경계](https://raw.githubusercontent.com/hae02y/pickle-ai-manual/main/assets/pickle-vault-boundaries.svg)
 
 *그림: [`README`](https://github.com/pickle-com/credential-enclave/blob/cff16a343bf5bb7953e5b65df6ab3600107e127d/README.md), [`protocol.md`](https://github.com/pickle-com/credential-enclave/blob/cff16a343bf5bb7953e5b65df6ab3600107e127d/docs/protocol.md), [`egress-policy.md`](https://github.com/pickle-com/credential-enclave/blob/cff16a343bf5bb7953e5b65df6ab3600107e127d/docs/egress-policy.md)를 바탕으로 이 책에서 작성.*
@@ -19,6 +21,8 @@
 5. 단, **Vault `release`는 필요한 비밀번호·카드 번호·CVC 또는 TOTP 코드 한 필드를 작업 실행 쪽에 넘긴다.** 넘긴 뒤의 평문은 enclave 내부 보호 범위 밖이다.
 
 이 구조는 “운영자가 모든 비밀을 평문으로 보관한다”는 단순 구조보다 강한 경계를 제공하지만, **작업을 실행하는 브라우저·worker가 넘겨받은 값**까지 완전히 숨기는 구조는 아니다. 공개 README가 이 한계를 명시한다.
+
+따라서 독자가 할 질문도 두 개다. “평소에 비밀은 어떻게 보관되는가?”와 “내가 맡긴 작업을 수행할 때 어디로 나가는가?” 첫 질문에는 암호화와 attestation이, 두 번째 질문에는 `release` 경계와 실행 환경이 답을 준다. 어느 하나의 설명으로 전체 위험을 판단하지 않는다.
 
 ## 암호 기술을 정확하게 읽기
 

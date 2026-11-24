@@ -2,6 +2,14 @@
 
 AI가 “완료했습니다”라고 말했어도 외부 사이트에서는 실패했을 수 있습니다. 반대로 오류 화면이 떠도 예약·결제가 처리됐을 수 있습니다. [Pickle 약관](https://www.pickle.com/ko/terms-of-service)은 웹사이트 변화, 결제 실패, AI의 실수 때문에 결과를 보장할 수 없다고 밝힙니다.
 
+**자료 시점:** 연결된 한국어 약관 페이지는 11월 24일에 **12월 8일 시행 예정**으로 표시됐습니다. 중단·환불에 실제로 적용되는 조건은 현행 지역 약관과 상대 서비스의 정책을 확인하세요. [18장 업데이트 노트](https://github.com/hae02y/pickle-ai-manual/blob/main/pages/18-updates-and-reading-guide.md)
+
+오류를 만나면 가장 먼저 “다시 시도할까?”가 떠오릅니다. 그러나 **제출 직후 화면만 멈춘 경우**에는 재시도가 같은 주문을 두 번 만들 수 있습니다. 복구의 첫 단계는 피클을 재촉하는 것이 아니라 외부 서비스가 무엇을 받았는지 확인하는 일입니다.
+
+![작업 오류 뒤 외부 상태를 확인하고 접수 여부에 따라 행동하는 흐름](https://raw.githubusercontent.com/hae02y/pickle-ai-manual/main/assets/pickle-retry-decision.svg)
+
+*그림: [공식 작업 확인·취소 안내](https://www.pickle.com/help/tasks/check-and-cancel)와 [결제 전 확인 안내](https://www.pickle.com/help/tasks/confirm-before-payment)를 바탕으로 이 책에서 만든 재시도 판단 도식입니다. 실제 앱 화면이 아닙니다.*
+
 ## 먼저 상태를 구분하세요
 
 ![피클 프로필의 작업 진행 목록 화면](https://www.pickle.com/help-center/screens/tasks-check-and-cancel.webp)
@@ -41,6 +49,8 @@ AI가 “완료했습니다”라고 말했어도 외부 사이트에서는 실�
 3. **조건 재확인:** 가격·날짜·대상·취소 규칙이 바뀌었다면 새 카드에서 다시 승인합니다.
 
 이 절차는 매뉴얼의 권장 방법입니다. Pickle의 자동 재시도 동작을 설명하는 것은 아닙니다.
+
+확인 결과가 **접수됨**이면 재시도하지 않고 예약·주문 조건을 대조합니다. **미접수**가 확인되면 변경된 조건을 읽고 새로 요청할 수 있습니다. **확인 불가**라면 섣불리 성공이나 실패로 판단하지 말고 업체의 문의 경로를 사용하세요. 이 세 상태를 구분하면 “오류가 떴으니 실패했다”는 추측을 줄일 수 있습니다.
 
 결제 화면이 끊겼을 때는 공식 도움말도 **바로 다시 결제하지 않고 먼저 결제 여부를 확인한다**고 안내합니다. 이미 결제됐는지 알 수 없으면 카드 내역, 주문 기록, 확인 번호를 먼저 확인하세요. [결제 전 확인 도움말](https://www.pickle.com/help/tasks/confirm-before-payment)
 
