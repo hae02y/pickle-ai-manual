@@ -14,19 +14,23 @@
 
 ## 키와 위임의 순서
 
-1. 공개 소스는 기기의 **마스터 키**를 iCloud Keychain에 두고, 여기서 서명·로그 복호화·사용자 키를 파생한다고 설명한다. 이 설명은 해당 소스가 구현하는 경로에 한정된다.
+1. [고정 커밋 README](https://github.com/pickle-com/credential-enclave/blob/cff16a343bf5bb7953e5b65df6ab3600107e127d/README.md)는 iOS 기기에서 만든 **마스터 키**를 iCloud Keychain에 보관하고, 여기서 계정 서명 키·로그 복호화 키·사용자 키를 파생한다고 설명한다. 다른 플랫폼이나 현재 서비스 전체에 똑같이 적용된다고 넓혀 말할 수는 없다.
 2. 앱의 secure program은 실행 중인 node의 **AWS Nitro attestation**을 검증한다. attestation은 enclave가 주장하는 코드 측정값(PCR0·PCR1·PCR2)과 공개 키를 묶는다.
 3. 앱은 사용자 키를 검증된 node의 공개 키로 봉인해 **최대 30일** 위임한다. node는 이를 메모리에서 사용한다.
 4. operator backend는 암호문과 네트워크 바이트를 중계한다. 공개 소스의 보장 범위에서 OAuth 토큰과 TOTP seed는 node 밖으로 평문 반환되지 않는다.
 5. 단, **Vault `release`는 필요한 비밀번호·카드 번호·CVC 또는 TOTP 코드 한 필드를 작업 실행 쪽에 넘긴다.** 넘긴 뒤의 평문은 enclave 내부 보호 범위 밖이다.
 
-이 구조는 “운영자가 모든 비밀을 평문으로 보관한다”는 단순 구조보다 강한 경계를 제공하지만, **작업을 실행하는 브라우저·worker가 넘겨받은 값**까지 완전히 숨기는 구조는 아니다. 공개 README가 이 한계를 명시한다.
+이 구조에서는 운영자 측 저장소에 암호문이 놓이고, node가 사용 순간에만 일부 값을 연다. [공개 README의 값별 위치 표](https://github.com/pickle-com/credential-enclave/blob/cff16a343bf5bb7953e5b65df6ab3600107e127d/README.md)는 **`release` 뒤의 평문이 운영자 영역에 들어갈 수 있음**을 보여 준다. [Pickle의 별도 개인정보 설명](https://www.pickle.com/how-your-pickle-protects-your-privacy)은 제품 작업에서 이 정보가 쓰이는 경로를 설명한다. 브라우저·작업 실행 환경의 세부 경로를 공개 enclave 소스만으로 확정할 수는 없다.
+
+같은 [README의 `local` 모드 설명](https://github.com/pickle-com/credential-enclave/blob/cff16a343bf5bb7953e5b65df6ab3600107e127d/README.md)은 개발용으로 일반 프로세스에서 실행하는 경로도 구분한다. 그 경로는 Nitro attestation으로 검증되지 않으며 사용자 키의 보관 분류도 `operator`다. 아래의 enclave 보장은 **검증된 enclave 경로**에 관한 설명이다. 실제 계정이 어떤 경로를 쓰는지는 소스만 읽어 확인할 수 없다.
 
 따라서 독자가 할 질문도 두 개다. “평소에 비밀은 어떻게 보관되는가?”와 “내가 맡긴 작업을 수행할 때 어디로 나가는가?” 첫 질문에는 암호화와 attestation이, 두 번째 질문에는 `release` 경계와 실행 환경이 답을 준다. 어느 하나의 설명으로 전체 위험을 판단하지 않는다.
 
 ## 암호 기술을 정확하게 읽기
 
-[`protocol.md`의 암호 표](https://github.com/pickle-com/credential-enclave/blob/cff16a343bf5bb7953e5b65df6ab3600107e127d/docs/protocol.md)에 따르면 키 파생에는 HKDF-SHA256, 서명에는 Ed25519, 위임 봉인에는 X25519·HKDF·ChaCha20-Poly1305를 조합한 HPKE base mode, 저장 레코드 암호화에는 ChaCha20-Poly1305를 사용한다. 레코드 암호문의 AAD는 계정·레코드·custody·provider 정보를 묶어 다른 맥락으로 옮겨 쓰는 오류를 줄인다.
+[`protocol.md`의 암호 표](https://github.com/pickle-com/credential-enclave/blob/cff16a343bf5bb7953e5b65df6ab3600107e127d/docs/protocol.md)에 따르면 키 파생에는 HKDF-SHA256, 서명에는 Ed25519를 쓴다. 위임 봉인에는 X25519·HKDF·ChaCha20-Poly1305를 조합한 HPKE base mode, 저장 레코드 암호화에는 ChaCha20-Poly1305를 쓴다.
+
+레코드 암호문의 AAD는 계정·레코드·키·보관 방식(custody)·종류·provider 정보를 묶는다. 이는 다른 계정이나 용도의 암호문을 잘못 끼워 넣었을 때 복호화를 거부하도록 돕는다. AAD가 평문을 사용한 이후의 안전까지 보장하는 것은 아니다.
 
 | 용어 | 이 제품 구조에서의 역할 | 보장하지 않는 것 |
 | --- | --- | --- |
@@ -45,5 +49,7 @@ Nitro의 attestation은 [AWS 공식 문서](https://docs.aws.amazon.com/enclaves
 
 ## 철회와 업데이트의 한계
 
-공개 README에 따르면 위임 철회 요청은 operator 경유로 살아 있는 node에 전달된다. operator가 살아 있는 node를 목록에서 누락하면, 그 node는 위임 만료까지 사용자 키를 유지할 수 있다. 만료 상한은 30일이다. 또한 operator는 공개 투명성 로그에 기록된 **새 release**로 위임을 이전할 수 있으며, 이전 전 별도 통지 기간은 없다. 이는 “코드가 공개되었으니 미래 버전도 자동으로 같은 보호 수준”이라는 추론을 막는다. 구체적인 접근 기록 검증은 [15장](https://wikidocs.net/491194)에서 다룬다.
+[고정 커밋 README의 철회 설명](https://github.com/pickle-com/credential-enclave/blob/cff16a343bf5bb7953e5b65df6ab3600107e127d/README.md)에 따르면 위임 철회 요청은 운영자 시스템을 거쳐 살아 있는 node에 전달된다. 운영자가 살아 있는 node를 목록에서 누락하면 그 node는 위임이 만료될 때까지 사용자 키를 유지할 수 있다. 각 위임의 상한은 30일이지만, 이것은 철회가 항상 즉시 끝난다는 뜻이 아니다.
+
+또한 운영자는 서명하고 공개 투명성 로그에 기록한 **새 release**로 위임을 이전할 수 있으며, 이전 전 별도 통지 기간은 없다. 이후 보호 규칙은 새 코드에 달린다. “현재 코드가 공개됐으므로 미래 버전도 같은 보호 수준”이라고 추론할 수 없는 이유다. 접근 기록의 검증 범위는 [15장](https://wikidocs.net/491194)에서 다룬다.
 

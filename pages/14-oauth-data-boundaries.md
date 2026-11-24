@@ -18,9 +18,13 @@ OAuth 연결에서는 사용자가 서비스 제공자에게 피클의 접근 �
 
 ## PKCE가 있는 연결과 없는 연결
 
-**PKCE**는 OAuth 승인 코드만 가로채도 토큰으로 교환하기 어렵게 하는 추가 검증자다. 공개 node는 PKCE verifier를 enclave 안에서 만든다고 설명한다. 그러나 [`egress-policy.md`의 한계 표](https://github.com/pickle-com/credential-enclave/blob/cff16a343bf5bb7953e5b65df6ab3600107e127d/docs/egress-policy.md)에 따르면 **Slack과 Notion처럼 이 구현에서 PKCE를 쓰지 않는 provider**는 승인 코드가 operator callback을 지나가며, operator가 client secret을 보유한다. 따라서 operator가 그 코드를 직접 교환할 수 있다. 이는 “모든 연결의 토큰이 처음부터 operator에게 절대 노출될 수 없다”는 포괄적 주장을 제한한다.
+**PKCE**는 OAuth 승인 코드를 가로챈 사람이 그 코드만으로 토큰을 받기 어렵게 하는 추가 확인 절차다. [공개 node 설명](https://github.com/pickle-com/credential-enclave/blob/cff16a343bf5bb7953e5b65df6ab3600107e127d/README.md)에 따르면 해당 절차를 쓰는 연결의 검증자는 enclave 안에서 만들어진다.
+
+하지만 [`egress-policy.md`의 한계 표](https://github.com/pickle-com/credential-enclave/blob/cff16a343bf5bb7953e5b65df6ab3600107e127d/docs/egress-policy.md)에 따르면 이 소스 버전의 **Slack·Notion 연결에는 PKCE가 없다.** 승인 코드가 운영자 쪽 callback을 지나고, 운영자가 client secret도 보유하므로 코드를 직접 교환할 수 있다. 따라서 “모든 연결에서 운영자는 토큰을 얻을 수 없다”는 포괄적 결론은 성립하지 않는다.
 
 PKCE 적용 여부는 **이 소스 버전의 provider별 구현**에 대한 설명이다. 서비스 제공자의 일반 지원 여부와 혼동하면 안 된다. 연결 목록과 구현은 업데이트될 수 있으므로 최신 release를 재확인한다.
+
+또 다른 예외는 [`oauth_imported` 레코드](https://github.com/pickle-com/credential-enclave/blob/cff16a343bf5bb7953e5b65df6ab3600107e127d/docs/egress-policy.md)다. 이 경로의 토큰은 기기가 암호화하기 **전에 운영자 영역에 있었던 값**이다. 이후 node 안에서 사용된다는 설명만으로 그 이전의 취급까지 소급해 보호됐다고 말할 수 없다. 연결 평가에는 **발급·가져오기 이전 경로**도 포함해야 한다.
 
 ## 허용 주소와 권한 범위
 

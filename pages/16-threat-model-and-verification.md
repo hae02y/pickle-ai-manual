@@ -1,6 +1,6 @@
 # 16. 위협 모델과 재현 가능한 검증 절차
 
-> 이 장은 **공개 자료에 근거한 보안·시스템 분석**이다. 서비스 침투 시험, 실제 계정 실험, 코드 전체의 형식 검증, 제3자 보안 감사가 아니다. 출처의 정확한 버전은 [`credential-enclave` commit `cff16a3`](https://github.com/pickle-com/credential-enclave/tree/cff16a343bf5bb7953e5b65df6ab3600107e127d)이며, 최신 release 태그는 분석 당시 `v2.3.0`이었다.
+> **자료 재확인: 2026년 11월 24일.** 이 장은 [`credential-enclave` commit `cff16a3`](https://github.com/pickle-com/credential-enclave/tree/cff16a343bf5bb7953e5b65df6ab3600107e127d)의 공개 자료에 근거한 보안·시스템 분석이다. 서비스 침투 시험, 실제 계정 실험, 코드 전체의 형식 검증, 제3자 보안 감사가 아니다. 릴리스 태그는 달라질 수 있으므로 아래 재현 절차에서도 **분석에 사용한 커밋**과 **실행 노드의 릴리스**를 따로 기록해야 한다.
 
 ## 위협 모델: 자산, 상대, 신뢰 가정
 
@@ -22,7 +22,7 @@
 | 겉으로 보이는 주장 | 반례·조건 | 근거 |
 | --- | --- | --- |
 | “토큰이 enclave에 있으니 연결 서비스의 모든 정보가 비공개다” | 메일 본문 같은 API 응답은 작업 처리를 위해 operator 쪽으로 나간다 | [`README`의 What a credential fetches](https://github.com/pickle-com/credential-enclave/blob/cff16a343bf5bb7953e5b65df6ab3600107e127d/README.md#what-it-does-not-guarantee) |
-| “연결 해제하면 즉시 모든 접근이 끝난다” | operator가 살아 있는 node를 철회 목록에서 누락하면 해당 위임은 만료 전까지 남을 수 있다 | 같은 README의 Withdrawing a delegation |
+| “위임 철회를 요청하면 모든 살아 있는 node의 위임이 즉시 끝난다” | operator가 철회 대상 node를 누락하면 해당 위임은 만료 전까지 남을 수 있다. 앱 계정 연결 해제와 제공자 토큰 철회는 별도 절차다 | 같은 README의 Withdrawing a delegation |
 | “허용된 API 목적지는 오직 한 요청이다” | provider API 허용 목록이 경로 접두사이면 그 아래 여러 주소에 토큰이 도달할 수 있다 | 같은 README의 Width of the address lists |
 | “암호문은 항상 가장 최신 상태다” | operator가 예전 암호화 레코드를 node에 다시 제시할 수 있다 | 같은 README의 Freshness of a record |
 | “API 호출 로그가 있으면 후속 접근도 통제된다” | API 호출이 provider 쪽의 지속 감시·공유 링크·서명 URL을 만들 수 있다 | 같은 README의 APIs that open a lasting access |
@@ -48,7 +48,7 @@
 
 1. [`pickle-com/credential-enclave`](https://github.com/pickle-com/credential-enclave)를 받으면서 commit `cff16a343bf5bb7953e5b65df6ab3600107e127d`를 고정한다. `README.md`, `docs/protocol.md`, `docs/egress-policy.md`, `secure-program/README.md`를 읽는다.
 2. `README`의 “What the source guarantees”와 “What it does not guarantee”를 나란히 대조한다. 특히 `release`, PKCE 예외, 기록의 최종 head, 위임 이전을 확인한다.
-3. release 태그의 `measurements.json`과 공식 검증 도구를 사용한다. 가능하면 독립 환경에서 enclave 이미지를 재현 빌드하고 PCR0·PCR1·PCR2를 비교한다. [공식 검증 명령](https://github.com/pickle-com/credential-enclave/blob/cff16a343bf5bb7953e5b65df6ab3600107e127d/README.md#how-to-verify)을 따른다.
+3. 확인하려는 **소스 커밋·그 커밋에 대응하는 빌드 측정값·실행 node의 릴리스**를 각각 기록한다. 대응 관계가 확인된 `measurements.json`과 공식 검증 도구를 사용한다. 가능하면 독립 환경에서 enclave 이미지를 재현 빌드하고 PCR0·PCR1·PCR2를 비교한다. [공식 검증 명령](https://github.com/pickle-com/credential-enclave/blob/cff16a343bf5bb7953e5b65df6ab3600107e127d/README.md#how-to-verify)을 따른다. 서로 다른 릴리스의 수치를 임의로 대조하지 않는다.
 4. 실행 node의 attestation을 nonce와 함께 받아 AWS 인증서 체인, 측정값, 공개 키 바인딩을 검증한다. nonce 없이 저장된 문서만 보는 것은 현재 실행 상태의 증명이 아니다.
 5. 앱 접근 로그, 외부 provider의 사용 내역, 예약·결제 결과를 대조한다. 로그 항목의 존재를 작업 성공으로 세지 않는다.
 
